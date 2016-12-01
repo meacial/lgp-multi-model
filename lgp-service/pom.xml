@@ -11,5 +11,11 @@
 
     <artifactId>lgp-service</artifactId>
 
+    <dependencies>
+        <dependency>
+            <groupId>com.lgp</groupId>
+            <artifactId>lgp-persist</artifactId>
+        </dependency>
+    </dependencies>
 
 </project>

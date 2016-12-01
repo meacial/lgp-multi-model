@@ -17,6 +17,10 @@
             <version>3.8.1</version>
             <scope>test</scope>
         </dependency>
+        <dependency>
+            <groupId>com.lgp</groupId>
+            <artifactId>lgp-service</artifactId>
+        </dependency>
     </dependencies>
     <build>
         <finalName>lgp-webapp</finalName>
