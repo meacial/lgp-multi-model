@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/lgp.iml" filepath="$PROJECT_DIR$/lgp.iml" />
+      <module fileurl="file://$PROJECT_DIR$/lgp-command/lgp-command.iml" filepath="$PROJECT_DIR$/lgp-command/lgp-command.iml" />
+      <module fileurl="file://$PROJECT_DIR$/lgp-model/lgp-model.iml" filepath="$PROJECT_DIR$/lgp-model/lgp-model.iml" />
+      <module fileurl="file://$PROJECT_DIR$/lgp-persist/lgp-persist.iml" filepath="$PROJECT_DIR$/lgp-persist/lgp-persist.iml" />
+      <module fileurl="file://$PROJECT_DIR$/lgp-service/lgp-service.iml" filepath="$PROJECT_DIR$/lgp-service/lgp-service.iml" />
+      <module fileurl="file://$PROJECT_DIR$/lgp-webapp/lgp-webapp.iml" filepath="$PROJECT_DIR$/lgp-webapp/lgp-webapp.iml" />
+    </modules>
+  </component>
+</project>
