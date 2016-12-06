@@ -31,11 +31,11 @@
     </annotationProcessing>
     <bytecodeTargetLevel>
       <module name="lgp" target="1.5" />
-      <module name="lgp-command" target="1.5" />
-      <module name="lgp-model" target="1.5" />
-      <module name="lgp-persist" target="1.5" />
-      <module name="lgp-service" target="1.5" />
-      <module name="lgp-webapp" target="1.5" />
+      <module name="lgp-command" target="1.8" />
+      <module name="lgp-model" target="1.8" />
+      <module name="lgp-persist" target="1.8" />
+      <module name="lgp-service" target="1.8" />
+      <module name="lgp-webapp" target="1.8" />
     </bytecodeTargetLevel>
   </component>
 </project>

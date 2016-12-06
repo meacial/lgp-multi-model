@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<server>
+    <url>${jdbc.url}</url>
+    <username>${jdbc.username}</username>
+    <password>${jdbc.passowrd}</password>
+</server>

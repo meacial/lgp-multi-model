@@ -17,18 +17,113 @@
     </modules>
 
     <properties>
+        <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
         <spring.framework.version>4.3.1</spring.framework.version>
+        <maven.jetty.plugin.version>6.1.26</maven.jetty.plugin.version>
+        <maven.compiler.plugin.version>3.6.0</maven.compiler.plugin.version>
+        <maven.antrun.plugin.version>1.8</maven.antrun.plugin.version>
+
+        <mybatis.version>3.4.1</mybatis.version>
+        <mybatis.spring.version>1.3.0</mybatis.spring.version>
+        <mybatis.genertor.version>1.3.5</mybatis.genertor.version>
+        <mybatis.guice.version>3.8</mybatis.guice.version>
+        <mybatis.migrations.version>3.2.1</mybatis.migrations.version>
+        <mybatis.spring.boot.version>1.1.1</mybatis.spring.boot.version>
+        <mybatis.mapper.version>3.3.9</mybatis.mapper.version>
+        <mybatis.freemarker.version>1.1.2</mybatis.freemarker.version>
+
+        <mortbay.jetty.util.version>6.1.25</mortbay.jetty.util.version>
     </properties>
 
 
     <dependencyManagement>
 
-        <!-- dependency of the other -->
-
-
-
-        <!-- dependency of this project -->
         <dependencies>
+
+            <!-- dependency of the other -->
+
+            <!-- MyBatis Start-->
+            <dependency>
+                <groupId>org.mybatis</groupId>
+                <artifactId>mybatis</artifactId>
+                <version>${mybatis.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>org.mybatis</groupId>
+                <artifactId>mybatis-spring</artifactId>
+                <version>${mybatis.spring.version}</version>
+                <!-- An easy-to-use Spring bridge for MyBatis sql mapping framework. -->
+            </dependency>
+            <dependency>
+                <groupId>org.mybatis.generator</groupId>
+                <artifactId>mybatis-generator-core</artifactId>
+                <version>${mybatis.genertor.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>org.mybatis</groupId>
+                <artifactId>mybatis-guice</artifactId>
+                <version>${mybatis.guice.version}</version>
+                <!-- The MyBatis Guice module is easy-to-use Google Guice bridge for MyBatis sql mapping framework. -->
+            </dependency>
+            <dependency>
+                <groupId>org.mybatis</groupId>
+                <artifactId>mybatis-migrations</artifactId>
+                <version>${mybatis.migrations.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>org.mybatis.spring.boot</groupId>
+                <artifactId>mybatis-spring-boot-starter</artifactId>
+                <version>${mybatis.spring.boot.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>tk.mybatis</groupId>
+                <artifactId>mapper</artifactId>
+                <version>${mybatis.mapper.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>org.mybatis.scripting</groupId>
+                <artifactId>mybatis-freemarker</artifactId>
+                <version>${mybatis.freemarker.version}</version>
+            </dependency>
+
+
+            <dependency>
+                <groupId>org.mortbay.jetty</groupId>
+                <artifactId>jetty-util</artifactId>
+                <version>${mortbay.jetty.util.version}</version>
+            </dependency>
+
+
+
+
+
+
+
+
+
+            <!-- MyBatis End -->
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+            <!-- dependency of this project -->
+
             <dependency>
                 <groupId>com.lgp</groupId>
                 <artifactId>lgp-command</artifactId>
@@ -69,14 +164,98 @@
 
         <pluginManagement>
             <plugins>
+
+                <plugin>
+                    <groupId>org.apache.maven.plugins</groupId>
+                    <artifactId>maven-compiler-plugin</artifactId>
+                    <version>${maven.compiler.plugin.version}</version>
+                    <configuration>
+                        <source>1.8</source>
+                        <target>1.8</target>
+                        <encoding>UTF-8</encoding>
+                    </configuration>
+                </plugin>
+
                 <plugin>
                     <groupId>org.mortbay.jetty</groupId>
                     <artifactId>maven-jetty-plugin</artifactId>
+                    <version>${maven.jetty.plugin.version}</version>
                 </plugin>
+
+                <plugin>
+                    <groupId>org.apache.maven.plugins</groupId>
+                    <artifactId>maven-antrun-plugin</artifactId>
+                    <version>${maven.antrun.plugin.version}</version>
+                </plugin>
+
+
+                <plugin>
+                    <groupId>org.apache.maven.plugins</groupId>
+                    <artifactId>maven-surefire-plugin</artifactId>
+                    <configuration>
+                        <testFailureIgnore>true</testFailureIgnore>
+                        <skip>false</skip>
+                    </configuration>
+                </plugin>
+
             </plugins>
         </pluginManagement>
 
     </build>
+
+
+
+
+
+
+    <profiles>
+        <profile>
+            <id>dev</id>
+            <activation>
+                <!--
+                <jdk>1.8</jdk>
+                <os>Windows 10</os>
+                -->
+                <activeByDefault>false</activeByDefault>
+                <property>
+                    <name>mavenVersion</name>
+                    <value>3.0</value>
+                </property>
+            </activation>
+            <properties>
+                <env>dev</env>
+            </properties>
+        </profile>
+        <profile>
+            <id>test</id>
+            <properties>
+                <env>test</env>
+            </properties>
+        </profile>
+        <profile>
+            <id>prod</id>
+            <properties>
+                <env>prod</env>
+            </properties>
+            <build>
+                <plugins>
+
+                    <!-- 覆盖默认的编译插件 -->
+                    <plugin>
+                        <groupId>org.apache.maven.plugins</groupId>
+                        <artifactId>maven-compiler-plugin</artifactId>
+                        <configuration>
+                            <debug>false</debug>        <!-- 不编译调试信息 -->
+                            <optimize>true</optimize>   <!-- 启用编译优化 -->
+                        </configuration>
+                    </plugin>
+                </plugins>
+            </build>
+        </profile>
+
+    </profiles>
+
+
 
 
 </project>

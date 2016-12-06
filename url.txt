@@ -1,0 +1,31 @@
+http://www.linuxidc.com/Linux/2014-06/103690.htm
+file:///C:/Users/Administrator/Downloads/%255Bwww.java1234.com%255DMaven%E6%9D%83%E5%A8%81%E6%8C%87%E5%8D%97%E4%B8%AD%E6%96%87%E7%89%88.pdf
+
+
+生命周期    Life
+阶段
+目标        Goal
+插件        Plugin
+
+Maven plugins
+http://maven.apache.org/plugins/index.html
+
+jdk java tools:
+http://docs.oracle.com/javase/8/docs/technotes/tools/
+
+
+
+Mysql tx_isolation MySql事务隔离级别
+http://xm-king.iteye.com/blog/770721
+
+
+Spring Cache 注解驱动
+http://www.ibm.com/developerworks/cn/opensource/os-cn-spring-cache/index.html
+
+
+Linux command
+http://sundful.iteye.com/blog/1730385
+
+
+Which is better to use - EHCache, OSCache or Swarmcache
+http://forum.spring.io/forum/other-spring-related/architecture/1161-which-is-better-to-use-ehcache-oscache-or-swarmcache

@@ -24,11 +24,44 @@
     </dependencies>
     <build>
         <finalName>lgp-webapp</finalName>
+        <defaultGoal>war</defaultGoal>
 
         <plugins>
             <plugin>
                 <groupId>org.mortbay.jetty</groupId>
                 <artifactId>maven-jetty-plugin</artifactId>
+            </plugin>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-antrun-plugin</artifactId>
+                <executions>
+                    <execution>
+                        <phase>pre-clean</phase>
+                        <goals>
+                            <goal>run</goal>
+                        </goals>
+                        <configuration>
+                            <tasks>
+                                <echo>++++++++++++++++++++++++++++++++</echo>
+                                <echo>Build will clean target directy.</echo>
+                                <echo>++++++++++++++++++++++++++++++++</echo>
+                            </tasks>
+                            <target>
+                                <!--
+                                  Place any Ant task here. You can add anything
+                                  you can add between <target> and </target> in a
+                                  build.xml.
+                                -->
+                            </target>
+                        </configuration>
+                    </execution>
+                </executions>
+                <!--<dependencies>
+                    <dependency>
+                        <groupId>ant-contrib</groupId>
+                        <artifactId>ant-contrib</artifactId>
+                    </dependency>
+                </dependencies>-->
             </plugin>
         </plugins>
 
