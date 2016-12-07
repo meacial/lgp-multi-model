@@ -33,6 +33,10 @@
         <mybatis.freemarker.version>1.1.2</mybatis.freemarker.version>
 
         <mortbay.jetty.util.version>6.1.25</mortbay.jetty.util.version>
+
+        <poi.version>3.15</poi.version>
+
+        <pagehelper.version>4.1.6</pagehelper.version>
     </properties>
 
 
@@ -92,6 +96,20 @@
                 <artifactId>jetty-util</artifactId>
                 <version>${mortbay.jetty.util.version}</version>
             </dependency>
+
+            <!-- 操作xml,doc文档的api -->
+            <dependency>
+                <groupId>org.apache.poi</groupId>
+                <artifactId>poi</artifactId>
+                <version>${poi.version}</version>
+            </dependency>
+            <!-- 分页组件 -->
+            <dependency>
+                <groupId>com.github.pagehelper</groupId>
+                <artifactId>pagehelper</artifactId>
+                <version>${pagehelper.version}</version>
+            </dependency>
+
 
 
 

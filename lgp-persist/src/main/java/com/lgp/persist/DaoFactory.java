@@ -17,7 +17,7 @@ public final class DaoFactory {
         throw new IllegalAccessError("No Support!");
     }
 
-    private static final Map<String, AbstractDao> daoMap = new ConcurrentHashMap<String, AbstractDao>();
+    private static final Map<String, AbstractDao> daoMap = new ConcurrentHashMap<>();
 
     private static final String USERDAOKEY = "userDao";
 

@@ -16,6 +16,10 @@
             <groupId>com.lgp</groupId>
             <artifactId>lgp-persist</artifactId>
         </dependency>
+        <dependency>
+            <groupId>org.apache.poi</groupId>
+            <artifactId>poi</artifactId>
+        </dependency>
     </dependencies>
 
 </project>

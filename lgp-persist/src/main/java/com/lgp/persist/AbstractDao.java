@@ -9,11 +9,11 @@ package com.lgp.persist;
 public interface
 AbstractDao<T> {
 
-    public void insert(T t);
+    void insert(T t);
 
-    public T select(T t);
+    T select(T t);
 
-    public boolean delete(T t);
+    boolean delete(T t);
 
-    public T update(T t);
+    T update(T t);
 }

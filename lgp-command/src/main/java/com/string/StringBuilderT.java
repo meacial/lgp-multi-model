@@ -14,11 +14,35 @@ public class StringBuilderT {
         String pre_new = "stringbuiler_new.test.";
         String pre_set = "stringbuiler_set.test.";
 
-        cleanBySetLength(pre_set, cnt);
+        for (int i = 0 ; i < 100 ; i++) {
+            try {
+                Thread.sleep(3000);
+            } catch (InterruptedException e) {
+                e.printStackTrace();
+            }
 
-        //cleanByDelete(pre_del, cnt);
+            cleanBySetLength(pre_set, cnt);
 
-        //cleanByNewInstance(pre_new, cnt);
+            try {
+                Thread.sleep(3000);
+            } catch (InterruptedException e) {
+                e.printStackTrace();
+            }
+
+            cleanByDelete(pre_del, cnt);
+
+            try {
+                Thread.sleep(3000);
+            } catch (InterruptedException e) {
+                e.printStackTrace();
+            }
+
+            cleanByNewInstance(pre_new, cnt);
+
+            if (i == 99) {
+                i = 0;
+            }
+        }
     }
 
     /**

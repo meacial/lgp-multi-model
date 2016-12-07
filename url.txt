@@ -13,7 +13,8 @@ http://maven.apache.org/plugins/index.html
 jdk java tools:
 http://docs.oracle.com/javase/8/docs/technotes/tools/
 
-
+Guice JAVA轻量级IOC框架
+http://www.cnblogs.com/whitewolf/p/4185908.html
 
 Mysql tx_isolation MySql事务隔离级别
 http://xm-king.iteye.com/blog/770721
@@ -29,3 +30,42 @@ http://sundful.iteye.com/blog/1730385
 
 Which is better to use - EHCache, OSCache or Swarmcache
 http://forum.spring.io/forum/other-spring-related/architecture/1161-which-is-better-to-use-ehcache-oscache-or-swarmcache
+
+
+Tair - 缓存服务
+Redis- 缓存服务
+
+
+常见性能优化策略
+http://www.codeceo.com/article/common-performance-optimization-strategies.html
+
+
+HotSpot
+http://www.th7.cn/Program/java/201511/681120.shtml
+
+
+b+树 《高性能MySQL》 《数据结构与算法分析》
+http://www.codeceo.com/article/mysql-index-slow-query.html
+
+15个有趣的CSS库
+http://www.codeceo.com/article/15-interesting-js-css-framework.html
+
+linux命令学习
+https://segmentfault.com/blog/learnning
+
+
+百度开源框架
+http://www.cnblogs.com/kingboy2008/p/6117741.html
+
+Go语言
+https://github.com/qieangel2013/livego/tree/master/views
+
+
+Transform your plain text into static websites and blogs.
+http://jekyllrb.com/
+
+技术周刊
+http://fex.baidu.com/weekly/
+
+DaoChain 道客
+http://blog.daocloud.io/dockerdaochain/

@@ -10,6 +10,6 @@ import java.util.Map;
  */
 public interface UserDao<User> extends AbstractDao<User> {
 
-    public void insert(Map<String, Object> userMap);
+    void insert(Map<String, Object> userMap);
 
 }
